@@ -5,7 +5,7 @@
 %bcond_with compat32
 %endif
 
-%define major 7
+%define major 8
 %define libname %mklibname ffi %{major}
 %define devname %mklibname -d ffi
 %define staticname %mklibname -d -s ffi
@@ -18,12 +18,12 @@
 
 Summary:	A portable foreign function interface library
 Name:		libffi
-Version:	3.3
-Release:	3
+Version:	3.4.2
+Release:	1
 Group:		System/Libraries
 License:	BSD
 Url:		http://sourceware.org/%{name}
-Source0:	ftp://sourceware.org/pub/%{name}/%{name}-%{version}.tar.gz
+Source0:	https://github.com/libffi/libffi/releases/download/v%{version}/libffi-%{version}.tar.gz
 Patch1:		libffi-3.2.1-o-tmpfile-eacces.patch
 BuildRequires:	autoconf
 

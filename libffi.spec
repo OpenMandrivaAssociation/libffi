@@ -19,7 +19,7 @@
 Summary:	A portable foreign function interface library
 Name:		libffi
 Version:	3.4.2
-Release:	1
+Release:	2
 Group:		System/Libraries
 License:	BSD
 Url:		http://sourceware.org/%{name}
@@ -174,7 +174,10 @@ cd ..
 %endif
 mkdir build
 cd build
-%configure --enable-static
+# Please keep disable-exec-static-tramp. This fix some garbage behaviors like crash in gjs.
+%configure  \
+            --enable-static \
+            --disable-exec-static-tramp
 
 %build
 %if %{with compat32}

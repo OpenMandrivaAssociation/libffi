@@ -14,12 +14,12 @@
 %define static32name libffi-static-devel
 
 # (tpg) optimize it a bit
-%global optflags %optflags -O3
+%global optflags %{optflags} -O3
 
 Summary:	A portable foreign function interface library
 Name:		libffi
 Version:	3.4.2
-Release:	2
+Release:	3
 Group:		System/Libraries
 License:	BSD
 Url:		http://sourceware.org/%{name}
@@ -112,6 +112,8 @@ applications that use %{name}.
 %package -n %{lib32name}
 Summary:	A portable foreign function interface library (32-bit)
 Group:		System/Libraries
+BuildRequires:	libc6
+Requires:	libc6
 
 %description -n %{lib32name}
 Compilers for high level languages generate code that follow certain
@@ -199,8 +201,8 @@ cd build
 %{_libdir}/pkgconfig/libffi.pc
 %{_includedir}/ffi*.h
 %{_libdir}/libffi.so
-%{_mandir}/man3/*
-%{_infodir}/libffi.info.*
+%doc %{_mandir}/man3/*
+%doc %{_infodir}/libffi.info.*
 
 %files -n %{staticname}
 %{_libdir}/*.a

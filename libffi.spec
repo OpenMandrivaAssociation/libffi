@@ -22,7 +22,7 @@ Version:	3.4.6
 Release:	1
 Group:		System/Libraries
 License:	BSD
-Url:		http://sourceware.org/%{name}
+Url:		https://sourceware.org/%{name}
 Source0:	https://github.com/libffi/libffi/releases/download/v%{version}/libffi-%{version}.tar.gz
 Patch1:		libffi-3.2.1-o-tmpfile-eacces.patch
 BuildRequires:	autoconf

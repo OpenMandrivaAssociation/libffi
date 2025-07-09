@@ -18,7 +18,7 @@
 
 Summary:	A portable foreign function interface library
 Name:		libffi
-Version:	3.4.8
+Version:	3.5.1
 Release:	1
 Group:		System/Libraries
 License:	BSD
